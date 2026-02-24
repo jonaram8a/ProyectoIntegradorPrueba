@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/5to/Proyecto%20Integrador%202/ChatApp/web/index.html</file>
-            <file>file:/D:/5to/Proyecto%20Integrador%202/ChatApp/src/java/org/integracode/chatapp/controller/CalcularReciclaje.java</file>
-            <file>file:/D:/5to/Proyecto%20Integrador%202/ChatApp/src/java/org/integracode/chatapp/model/Reciclaje.java</file>
-            <file>file:/D:/5to/Proyecto%20Integrador%202/ChatApp/src/java/org/integracode/chatapp/rest/RESTReciclaje.java</file>
-            <file>file:/D:/5to/Proyecto%20Integrador%202/ChatApp/web/WEB-INF/web.xml</file>
-            <file>file:/D:/5to/Proyecto%20Integrador%202/ChatApp/web/js/reciclajeApp.js</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/src/java/org/integracode/chatapp/controller/CalcularReciclaje.java</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/src/java/org/integracode/chatapp/rest/RESTReciclaje.java</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/src/java/org/integracode/chatapp/rest/RESTUsuario.java</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/src/java/org/integracode/chatapp/controller/ControllerUsuario.java</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/src/java/org/integracode/chatapp/model/Usuario.java</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/src/java/org/integracode/chatapp/bd/ConexionMySQL.java</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/web/index.html</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/web/js/ChatApp_sec.js</file>
+            <file>file:/J:/proyecto%20inte/ProyectoIntegradorPrueba/ChatApp/web/js/reciclajeApp.js</file>
         </group>
     </open-files>
 </project-private>

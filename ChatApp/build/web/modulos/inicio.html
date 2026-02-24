@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <head>
+        <title>ChatApp - Gestión de Reciclaje</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jonathan Javier Ramirez Ochoa">
+        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.css">
+    </head>
+    <body class="bg-light">
+        
+        <header class="bg-white py-4 mb-4 border-bottom border-success border-3 shadow-sm">
+            <div class="container text-center">
+                <h1 class="text-success fw-bold">ChatApp: Reciclaje</h1>
+                <p class="text-muted">Sistema de Gestión de Residuos Valorizables</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="row g-4">
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="h5 mb-0">Cotizador de Materiales</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="txtMaterial" class="form-label fw-bold">Material:</label>
+                                <select id="txtMaterial" class="form-select">
+                                    <option value="Fierro">Fierro Viejo</option>
+                                    <option value="Aluminio">Aluminio</option>
+                                    <option value="PET">Plástico PET</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="txtPeso" class="form-label fw-bold">Peso Estimado (kg):</label>
+                                <input id="txtPeso" type="number" class="form-control" placeholder="Ej: 10.5">
+                            </div>
+                            <button class="btn btn-success w-100" onclick="enviarDatosReciclaje();">
+                                Calcular y Guardar
+                            </button>
+                            <hr>
+                            <div class="form-floating">
+                                <input id="txtResultado" class="form-control bg-white fw-bold text-primary" readonly placeholder="Resultado">
+                                <label for="txtResultado">Pago Estimado ($):</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="h5 mb-0">Servicios y Recolección</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info py-2">
+                                <small><strong>Estado del Servicio:</strong> Conectado a REST API</small>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Dirección de Recogida:</label>
+                                <textarea id="txtDireccion" class="form-control" rows="2" placeholder="Ingresa tu ubicación..."></textarea>
+                            </div>
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="consultarServicioREST();">
+                                Consultar Disponibilidad
+                            </button>
+                            <div id="panelMensajes" class="mt-3 p-2 bg-light border rounded small text-muted text-center">
+                                Esperando acción del usuario...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <script src="style/bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="js/reciclajeApp.js"></script>
+    </body>
+</html>

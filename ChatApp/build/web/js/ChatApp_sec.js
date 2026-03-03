@@ -1,49 +1,20 @@
-async function login()
-{
-    let nombreUsuario = document.getElementById("txtUsuario").value;
-    let contrasenia = document.getElementById("txtPassword").value;
+async function validarAcceso() {
+    let user = document.getElementById("txtUsuario").value;
+    let pass = document.getElementById("txtPassword").value;
 
-    let url = "api/usuario/login";
-
-    let params = {
-        nombre: nombreUsuario,
-        contrasenia: contrasenia
-    };
-
-    let confServ = {
+    let params = new URLSearchParams({ nombre: user, contrasenia: pass });
+    let resp = await fetch("api/usuario/login", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
-        body: new URLSearchParams(params)
-    };
-
-    let resp = await fetch(url, confServ);
+        body: params
+    });
     let data = await resp.json();
 
-    console.log(data);
-
-    if (data.error != null) {
-        Swal.fire('Error', data.error, 'warning');
-        return;
-    } 
-    else if (data.exception != null) {
-        Swal.fire("Error en el servidor", data.exception, 'error');
-        return;
-    } 
-    else {
-        Swal.fire({
-    icon: 'success',
-    title: 'Bienvenido',
-    text: 'Usuario autenticado correctamente 🎉',
-    confirmButtonText: 'Continuar'
-}).then(() => {
-    window.location.href = "modulos/inicio.html";
-});
+    if (data.idUsuario) {
+        localStorage.setItem("usuario", JSON.stringify(data));
+        // 1: Vendedor (inicio.html), 2: Tienda (tienda.html)
+        if (data.idRol === 2) window.location.href = "modulo/tienda.html";
+        else window.location.href = "modulo/inicio.html";
+    } else {
+        alert("Credenciales incorrectas");
     }
-}
-
-function validarAcceso(){
-    login();
-}
-
-function logout(){
 }

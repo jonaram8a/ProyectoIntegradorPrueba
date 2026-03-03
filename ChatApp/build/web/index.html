@@ -1,56 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>ChatApp - Iniciar Sesión</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/bootstrap/css/bootstrap.css">
-    </head>
-    <body class="bg-light d-flex align-items-center vh-100">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="card shadow-lg border-0">
-                        <div class="card-header bg-success text-white text-center py-3">
-                            <h4 class="mb-0">ChatApp Login</h4>
-                        </div>
-                        <div class="card-body p-4">
-                            <form id="formLogin">
-                                <div class="mb-3">
-                                    <label for="txtUsuario" class="form-label fw-bold text-muted">Usuario:</label>
-                                    <div class="input-group">
-                                        <input type="text" id="txtUsuario" class="form-control border-start-0" placeholder="alguien@example.com" required>
-                                    </div>
-                                </div>
-                                
-                                <div class="mb-4">
-                                    <label for="txtPassword" class="form-label fw-bold text-muted">Contraseña:</label>
-                                    <div class="input-group">
-                                        <input type="password" id="txtPassword" class="form-control border-start-0" placeholder="••••••••" required>
-                                    </div>
-                                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp - Login</title>
+    <link rel="stylesheet" href="style/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+</head>
+<body class="bg-light d-flex align-items-center vh-100">
 
-                                <button type="button" class="btn btn-success w-100 py-2 fw-bold" onclick="validarAcceso();">
-                                    Ingresar
-                                </button>
-                            </form>
-                            
-                            <div class="mt-3 text-center">
-                                <span class="text-primary" role="button" onclick="" style="cursor: pointer;">
-                                    Olvidaste tu contraseña?
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white text-center py-3">
-                            <span class="text-primary" role="button" onclick="" style="cursor: pointer;">
-                                    Regístrate aquí
-                            </span>
-                        </div>
-                    </div>
+    <div class="container text-center col-md-4">
+        <img src="img/Aplicacion.png" class="img-fluid mb-4" style="max-height: 110px;" alt="Logo ChatApp">
+        
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0">Acceso al Sistema</h4>
+            </div>
+            <div class="card-body p-4">
+                <div class="mb-3 text-start">
+                    <label class="form-label fw-bold">Correo Electrónico:</label>
+                    <input type="text" id="txtUsuario" class="form-control" placeholder="nombre@ejemplo.com">
                 </div>
+                <div class="mb-3 text-start">
+                    <label class="form-label fw-bold">Contraseña:</label>
+                    <input type="password" id="txtPassword" class="form-control" placeholder="••••••••">
+                </div>
+                <button class="btn btn-success w-100 fw-bold py-2" onclick="validarAcceso();">
+                    INGRESAR
+                </button>
             </div>
         </div>
-        <script src="style/bootstrap/js/bootstrap.bundle.js"></script>
-        <script src="js/reciclajeApp.js"></script>
-    </body>
+    </div>
+
+    <script src="style/sweetalert2/sweetalert2.min.js"></script>
+    <script src="js/ChatApp_sec.js"></script>
+</body>
 </html>

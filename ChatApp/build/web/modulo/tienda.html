@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatApp - Admin Tienda</title>
+    <link rel="stylesheet" href="../style/bootstrap/css/bootstrap.css">
+</head>
+<body class="bg-dark text-white">
+
+    <nav class="navbar navbar-dark bg-dark border-bottom border-success mb-4">
+        <div class="container">
+            <span class="navbar-brand">
+                <img src="../img/Aplicacion.png" width="30" class="me-2"> Panel Administración
+            </span>
+            <button class="btn btn-danger btn-sm" onclick="location.href='../index.html'">Cerrar Sesión</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <div class="card bg-secondary text-white border-0 shadow">
+                    <div class="card-header bg-success fw-bold">Control de Precios por kg</div>
+                    <div class="card-body">
+                        <table class="table table-dark table-sm" id="tablaPrecios">
+                            </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card bg-secondary text-white border-0 shadow">
+                    <div class="card-header bg-primary fw-bold">Solicitudes de Recolección GPS</div>
+                    <div class="card-body" id="listaRutas">
+                        <p class="text-center small">Escaneando área cercana...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/tiendaApp.js"></script>
+</body>
+</html>
